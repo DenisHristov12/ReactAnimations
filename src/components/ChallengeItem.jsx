@@ -35,14 +35,17 @@ export default function ChallengeItem({
             <h2>{challenge.title}</h2>
             <p>Complete until {formattedDate}</p>
             <p className="challenge-item-actions">
-              <button onClick={handleCancel} className="btn-negative">
+              <button
+                onClick={handleCancel}
+                className="btn-negative">
                 Mark as failed
               </button>
               <button onClick={handleComplete}>Mark as completed</button>
             </p>
           </div>
         </header>
-        <div className="challenge-item-details">
+        <div
+          className={`challenge-item-details ${isExpanded ? 'expanded' : ''}`}>
           <p>
             <button onClick={onViewDetails}>
               View Details{' '}
